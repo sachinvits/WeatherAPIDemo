@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class WeatherRequestDto {
-	private Date dateRecorded;
+	private Date date;
 	private Long id;
 	private LocationRequestDto location;
 	private List<Float> temperature;

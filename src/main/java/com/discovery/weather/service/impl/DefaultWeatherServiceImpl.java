@@ -39,7 +39,7 @@ public class DefaultWeatherServiceImpl implements WeatherService {
 
 		final Weather weather = Weather.builder()//
 				.id(weatherRequestDto.getId())//
-				.dateRecorded(weatherRequestDto.getDateRecorded())//
+				.dateRecorded(weatherRequestDto.getDate())//
 				.temperature(weatherRequestDto.getTemperature())//
 				.location(location)//
 				.build();//
@@ -72,7 +72,7 @@ public class DefaultWeatherServiceImpl implements WeatherService {
 					.build();//
 
 			final WeatherResponseDto weatherResponse = WeatherResponseDto.builder()//
-					.dateRecorded(weather.getDateRecorded())//
+					.date(weather.getDateRecorded())//
 					.id(weather.getId())//
 					.temperature(weather.getTemperature())//
 					.location(locationResponse).build();//
